@@ -52,4 +52,6 @@ typedef enum boolean
 boolean is_empty_stack(stack_t *st);
 int check_malloc(stack_t *st);
 stack_t *push(stack_t *st, int n);
+void print_stack(stack_t *st);
+
 #endif
