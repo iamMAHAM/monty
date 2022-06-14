@@ -37,6 +37,19 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-/*---------------------------- PROTOTYPES -------------------------------*/
+/**
+ * enum boolean - true or false
+ * @false: 0
+ * @true: 1
+ */
+typedef enum boolean
+{
+	false,
+	true
+} boolean;
 
+/*---------------------------- PROTOTYPES -------------------------------*/
+boolean is_empty_stack(stack_t *st);
+int check_malloc(stack_t *st);
+stack_t *push(stack_t *st, int n);
 #endif
