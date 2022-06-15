@@ -49,9 +49,12 @@ typedef enum boolean
 } boolean;
 
 /*---------------------------- PROTOTYPES -------------------------------*/
-boolean is_empty_stack(stack_t *st);
+boolean is_empty_stack(stack_t **st);
 int check_malloc(stack_t *st);
-stack_t *push(stack_t *st, int n);
+void push(stack_t **st, unsigned int n);
+void pall(stack_t **st, unsigned int n);
 void print_stack(stack_t *st);
-
+stack_t *add_dnodeint(stack_t **st, unsigned int n);
+stack_t *add_dnodeint_end(stack_t **st, unsigned int n);
+void free_stack(stack_t *st);
 #endif
