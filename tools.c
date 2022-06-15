@@ -45,8 +45,9 @@ void (*get_func(char **commands))(stack_t **, unsigned int)
 	length = 2;
 	for (i = 0; i < length; i++)
 	{
-		if (strcmp(p[i].opcode, commands[0]) == 0)
+		if (strcmp(p[i].opcode, commands[1]) == 0)
 		{
+			printf("command[0] : %s\n", commands[1]);
 			return (p[i].f);
 		}
 	}
