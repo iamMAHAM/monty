@@ -6,36 +6,13 @@
  * @n: the integer to add
  * Return: the new stack
  */
-stack_t *push(stack_t *st, int n)
+void push(stack_t **st, unsigned int n)
 {
-	stack_t *new;
-
-	new = malloc(sizeof(stack_t));
-	check_malloc(new);
-	new->n = n;
-	new->prev = NULL;
-	if (st)
-		new->next = st;
-	st = new;
-
-	return (new);
+	add_dnodeint(st, n);
 }
 
-/**
- * print_stack - prints all stack element
- *
- * @st: the stack
- */
-void print_stack(stack_t *st)
+void pall(stack_t **stack, unsigned int n)
 {
-	if (is_empty_stack(st))
-	{}
-	else
-	{
-		while (st)
-		{
-			printf("%d\n", st->n);
-			st = st->next;
-		}
-	}
+	if (*stack)
+		print_stack(*stack);
 }
