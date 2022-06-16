@@ -5,4 +5,8 @@ pall
 push 2
 pint
 swap
-no
+nop
+add
+mul
+div
+pall
