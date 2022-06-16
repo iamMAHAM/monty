@@ -48,17 +48,6 @@ typedef enum boolean
 	true
 } boolean;
 
-/**
- * struct args_list - the list of all arguments
- * @arg: the current arg
- * @next: the pointer to next arg
- */
-typedef struct args_list
-{
-	char *arg;
-	struct args_list *next;
-} args_list;
-
 /*---------------------------- PROTOTYPES -------------------------------*/
 
 /*tools.c*/
