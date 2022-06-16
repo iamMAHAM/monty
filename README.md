@@ -21,3 +21,7 @@ The opcode *pall* prints all the values on the stack, starting from the top of t
 * Usage *pall*
 * Format: see example
 * If the stack is empty, don’t print anything
+
+## 1.pint
+
+

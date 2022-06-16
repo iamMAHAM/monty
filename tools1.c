@@ -17,8 +17,6 @@ char **strtow(char *str, char *delims)
 	if (str == NULL || !*str)
 		return (NULL);
 	wc = get_word_count(str, delims);
-
-
 	if (wc == 0)
 		return (NULL);
 	words = malloc((wc + 1) * sizeof(char *));
@@ -28,9 +26,7 @@ char **strtow(char *str, char *delims)
 	{
 		wordLen = get_word_length(str, delims);
 		if (is_delim(*str, delims))
-		{
 			str = get_next_word(str, delims);
-		}
 		words[i] = malloc((wordLen + 1) * sizeof(char));
 		if (words[i] == NULL)
 		{
