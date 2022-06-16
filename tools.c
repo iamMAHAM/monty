@@ -145,7 +145,6 @@ int monty(FILE *fd)
 		free(line);
 		return (malloc_error());
 	}
-
 	free(line);
 	return (exit_status);
 }
