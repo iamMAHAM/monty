@@ -71,6 +71,13 @@ void mpint(stack_t **stack, unsigned int line_number);
 void mpop(stack_t **stack, unsigned int line_number);
 void mswap(stack_t **stack, unsigned int line_number);
 
+/*functions.c*/
+void madd(stack_t **stack, unsigned int line_number);
+void msub(stack_t **stack, unsigned int line_number);
+void mdiv(stack_t **stack, unsigned int line_number);
+void mmul(stack_t **stack, unsigned int line_number);
+void mmod(stack_t **stack, unsigned int line_number);
+
 /*errors.c*/
 int usage_error(void);
 int malloc_error(void);
