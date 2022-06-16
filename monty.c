@@ -9,8 +9,19 @@
  */
 int main(int argc, char **argv)
 {
-	for (int i = 0; i < argc; i++)
+	args_list *args;
+	if (argc >= 2)
 	{
-		printf("Nothing here now...\n");
+		for (int i = 1; i < argc; i++)
+		{
+			args->arg = argv[i];
+		}
 	}
+
+	while (args)
+	{
+		printf("args[%s]\n", args->arg);
+		args = args->next;
+	}
+	
 }
