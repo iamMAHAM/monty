@@ -64,7 +64,7 @@ typedef struct args_list
 /*tools.c*/
 boolean is_empty_stack(stack_t **st);
 int check_malloc(stack_t *st);
-void (*get_func(char **commands))(stack_t **, unsigned int)
+void (*get_func(char **commands))(stack_t **, unsigned int);
 stack_t *add_dnodeint(stack_t **st, unsigned int n);
 stack_t *add_dnodeint_end(stack_t **st, unsigned int n);
 
