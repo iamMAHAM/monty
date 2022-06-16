@@ -1,4 +1,4 @@
-:#include "monty.h"
+#include "monty.h"
 #include <string.h>
 
 /**
@@ -149,43 +149,3 @@ int monty(FILE *fd)
 	free(line);
 	return (exit_status);
 }
-{
-        int i, j;
-
-        for (i = 0; line[i]; i++)
-        {
-                for (j = 0; delims[j]; j++)
-                {
-                        if (line[i] == delims[j])
-                                break;
-                }
-                if (delims[j] == '\0')
-                        return (0);
-        }
-
-        return (1);
-}
-
-/**
- * get_op_func - Matches an opcode with its corresponding function.
- * @opcode: The opcode to match.
- *
- * Return: A pointer to the corresponding function.
- */
-void (*get_op_func(char *opcode))(stack_t**, unsigned int)
-{
-        instruction_t op_funcs[] = {
-                {"push", mpush},
-                {"pall", mpall},
-                {"pint", mpint},
-                {"pop", mpop},
-                {"swap", mswap},
-                {NULL, NULL}
-        };
-        int i;
-
-        for (i = 0; op_funcs[i].opcode; i++)
-        {
-                if (strcmp(opcode, op_funcs[i].opcode) == 0)
-                        return (op_funcs[i].f);
-
