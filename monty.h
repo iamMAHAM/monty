@@ -9,7 +9,7 @@
 #define QUEUE 1
 #define DELIMS " \n\t\a\b"
 
-/* GLOBAL OPCODE TOKENS */
+/* opcode token */
 extern char **op_toks;
 
 /**
@@ -80,6 +80,14 @@ void mmod(stack_t **stack, unsigned int line_number);
 
 /*functions2.c*/
 void mnop(stack_t **stack, unsigned int line_number);
+void mpchar(stack_t **stack, unsigned int line_number);
+void mpstr(stack_t **stack, unsigned int line_number);
+void mrotl(stack_t **stack, unsigned int line_number);
+void mrotr(stack_t **stack, unsigned int line_number);
+
+/*functions3.c*/
+void mstack(stack_t **stack, unsigned int line_number);
+void mqueue(stack_t **stack, unsigned int line_number);
 
 /*errors.c*/
 int usage_error(void);
