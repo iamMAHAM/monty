@@ -34,8 +34,7 @@ void mpush(stack_t **stack, unsigned int line_number)
 	new->n = atoi(op_toks[1]);
 	if (check_mode(*stack) == STACK)
 	{
-		tmp = (*stack)->next;
-		new->prev = *stack;
+		tmp = (*stack)->next, new->prev = *stack;
 		new->next = tmp;
 		if (tmp)
 			tmp->prev = new;
@@ -46,9 +45,7 @@ void mpush(stack_t **stack, unsigned int line_number)
 		tmp = *stack;
 		while (tmp->next)
 			tmp = tmp->next;
-		new->prev = tmp;
-		new->next = NULL;
-		tmp->next = new;
+		new->prev = tmp, new->next = NULL, tmp->next = new;
 	}
 }
 
